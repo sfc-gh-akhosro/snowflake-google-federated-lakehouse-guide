@@ -59,8 +59,6 @@ Three distinctions matter here:
 This is the pillar of a federated lakehouse: true interoperability, without handing the keys away.
 First, let's set up the buckets and roles.
 
-![Isolated Iceberg](./input/isolated-iceberg.svg)
-
 
 > [Go to code: Teams and Roles](#teams-and-roles-code)
 
@@ -72,6 +70,10 @@ Now each team creates its Iceberg table in its own workspace:
 - In Snowflake, using the Snowflake **finance-analyst** role, create the `mortgage_rates` Iceberg table in `horizon.finance` and store it in the customer's finance bucket. We get the series from the Snowflake Marketplace.
 
 - In BigQuery, using the BigQuery **sales-analyst** identity, create the `housing` Iceberg table in `runtime.sales` and store it in the customer's sales bucket. We take five states from the Census American Community Survey.
+
+
+![Isolated Iceberg](./input/isolated-iceberg.svg)
+
 
 > [Go to code: Iceberg Tables](#iceberg-tables-code)
 
@@ -187,7 +189,7 @@ Nothing is copied. Each engine asks the owner catalog what exists and who may to
 
 Reading is half the story. Sales asks finance for a typical monthly mortgage payment on a median home, per state and year. Finance calculates it and stores it as `monthly_payment` in `runtime.sales`, because that result *belongs* with the sales team's housing data.
 
-That is another advantage of the federated Iceberg lakehouse: you write the table where it should live *logically*, not where the writer's engine happens to sit.
+That is another advantage of the federated Iceberg lak`ehouse: you write the table where it should live *logically*, not where the writer's engine happens to sit.
 
 In older data platforms, the physical constraint — who owns the files, who holds the key — dictated where a table could be written. The result was a tangled web of data objects.
 
