@@ -57,45 +57,10 @@ Three distinctions matter here:
 - The customer delegates the governance layer to those trusted catalogs, and keeps ownership of what is on disk.
 
 This is the pillar of a federated lakehouse: true interoperability, without handing the keys away.
-
-```dot
-digraph iceberg {
-    rankdir=TD
-    graph [fontname="Helvetica", bgcolor="transparent", pad=0.4 fontsize=11 penwidth=0.2]
-    node  [fontname="Helvetica", fontsize=10, style="filled,rounded", shape=box,
-           fillcolor="#BBDEFB", color="#1565C0"]
-    edge  [fontname="Helvetica", fontsize=9, color="#555555", arrowsize=0.7]
-
-    subgraph cluster_snowflake {
-        label=Snowflake
-        team_sf [label="Finance Analyst"]
-        sf [shape=record label="Snowflake Horizon"]
-    }
-    
-    subgraph cluster_gcp {
-        label = BigQuery
-        team_bq [label="Sales Analyst"]
-
-        bq [label="Runtime Catalog"]
-    }
-
-    sf -> team_sf
-    bq -> team_bq
-    
-    subgraph cluster_customer {
-        graph[ labelloc=b]
-        label="Customer Iceberg Buckets"
-
-        finance_bucket [shape=record label="Finance\nBucket | {mortgage_rates | ...}"]
-        sales_bucket [shape=record label="Sales\nBucket | {housing | ...}"]
-    }
-    
-    team_sf -> finance_bucket
-    team_bq -> sales_bucket
-}
-```
-
 First, let's set up the buckets and roles.
+
+![Isolated Iceberg](./input/isolated-iceberg.svg)
+
 
 > [Go to code: Teams and Roles](#teams-and-roles-code)
 
@@ -211,53 +176,8 @@ The walk the other way is the same motion with the seats swapped. `sales-analyst
 Everything is set up: buckets, roles, Iceberg tables, catalog trust, and vended credentials. The federated lakehouse is ready. From here on, both teams run their daily reads and writes as if every table were local, no matter where it sits or who manages it. Each table is docked in both workspaces.
 
 
+![federated Iceberg](./input/federated-iceberg.svg)
 
-```dot
-
-digraph catalog_federation {
-    rankdir=TD
-    nodesep=1
-    splines=true;
-    
-    graph [fontname="Helvetica", bgcolor="transparent", pad=0.4 style=dashed fontsize=14]
-    node  [fontname="Helvetica", fontsize=12, style="filled,rounded", shape=box,
-           fillcolor="#BBDEFB", color="#1565C0"]
-    edge  [fontname="Helvetica", fontsize=10, color="#555555", arrowsize=0.7]
-    
-    
-
-    // Snowflake side
-    subgraph cluster_snowflake {
-        label="Snowflake"
-
-        HZ [label="Horizon Catalog"]
-        SF [label="Finance Team"]
-    }
-
-    // GCP side
-    subgraph cluster_gcp {
-        label="Google Cloud Lakehouse"
-
-        BLM [label="Runtime Catalog"]
-        BQ  [label="Sales Team"]
-    }
-    
-
-    gcs [label= "{Customer GCS | {Finance Bucket | Sales Bucket}}" shape=record]
-    
-
-    // Engines read/write to storage
-    SF -> gcs [style=dashed, label="Read/Write"]
-    BQ -> gcs [style=dashed, label="Read/Write"]
-    
-    HZ -> BLM [headlabel="catalog-linked database" constraint=false labeldistance=8 labelangle=5]
-    BLM -> HZ [label="federated catalog" constraint=false]
-    
-    HZ -> SF
-    BLM -> BQ
-}
-
-```
 
 With Iceberg, the first goal is zero data copy. Each engine reads straight from the source files in the customer's bucket, so in theory and in practice there is no performance hit. A free data lunch.
 
