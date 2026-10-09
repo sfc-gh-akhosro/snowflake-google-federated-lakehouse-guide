@@ -1,90 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="356pt" height="318pt" viewBox="0.00 0.00 356.00 318.00">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(28.8 289.2)">
-<title>iceberg</title>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="467pt" height="301pt" viewBox="0.00 0.00 467.00 301.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(28.8 272.4)">
+<title>catalog_federation</title>
 <g id="clust1" class="cluster">
 <title>cluster_snowflake</title>
-<polygon fill="none" stroke="black" stroke-width="0.2" points="155,-106.2 155,-252.4 271,-252.4 271,-106.2 155,-106.2"/>
-<text xml:space="preserve" text-anchor="middle" x="213" y="-238.5" font-family="Helvetica,sans-Serif" font-size="11.00">Snowflake</text>
+<polygon fill="none" stroke="black" stroke-dasharray="5,2" points="8,-85.8 8,-235.6 126,-235.6 126,-85.8 8,-85.8"/>
+<text xml:space="preserve" text-anchor="middle" x="67" y="-219" font-family="Helvetica,sans-Serif" font-size="14.00">Snowflake</text>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_gcp</title>
-<polygon fill="none" stroke="black" stroke-width="0.2" points="15,-106.2 15,-251.9 127,-251.9 127,-106.2 15,-106.2"/>
-<text xml:space="preserve" text-anchor="middle" x="71" y="-238" font-family="Helvetica,sans-Serif" font-size="11.00">BigQuery</text>
+<polygon fill="none" stroke="black" stroke-dasharray="5,2" points="279,-85.8 279,-235.6 401,-235.6 401,-85.8 279,-85.8"/>
+<text xml:space="preserve" text-anchor="middle" x="340" y="-219" font-family="Helvetica,sans-Serif" font-size="14.00">GCP Lakehouse</text>
 </g>
-<g id="clust3" class="cluster">
-<title>cluster_customer</title>
-<polygon fill="none" stroke="black" stroke-width="0.2" points="8,-8 8,-86.2 290,-86.2 290,-8 8,-8"/>
-<text xml:space="preserve" text-anchor="middle" x="149" y="-15.3" font-family="Helvetica,sans-Serif" font-size="11.00">Customer Iceberg Buckets</text>
-</g>
-<!-- team_sf -->
+<!-- HZ -->
 <g id="node1" class="node">
-<title>team_sf</title>
-<path fill="#bbdefb" stroke="#1565c0" d="M244.57,-150.2C244.57,-150.2 181.43,-150.2 181.43,-150.2 175.43,-150.2 169.43,-144.2 169.43,-138.2 169.43,-138.2 169.43,-126.2 169.43,-126.2 169.43,-120.2 175.43,-114.2 181.43,-114.2 181.43,-114.2 244.57,-114.2 244.57,-114.2 250.57,-114.2 256.57,-120.2 256.57,-126.2 256.57,-126.2 256.57,-138.2 256.57,-138.2 256.57,-144.2 250.57,-150.2 244.57,-150.2"/>
-<text xml:space="preserve" text-anchor="middle" x="213" y="-129.2" font-family="Helvetica,sans-Serif" font-size="10.00">Finance Analyst</text>
+<title>HZ</title>
+<path fill="#bbdefb" stroke="#1565c0" d="M106.02,-202.8C106.02,-202.8 27.98,-202.8 27.98,-202.8 21.98,-202.8 15.98,-196.8 15.98,-190.8 15.98,-190.8 15.98,-178.8 15.98,-178.8 15.98,-172.8 21.98,-166.8 27.98,-166.8 27.98,-166.8 106.02,-166.8 106.02,-166.8 112.02,-166.8 118.02,-172.8 118.02,-178.8 118.02,-178.8 118.02,-190.8 118.02,-190.8 118.02,-196.8 112.02,-202.8 106.02,-202.8"/>
+<text xml:space="preserve" text-anchor="middle" x="67" y="-181.2" font-family="Helvetica,sans-Serif" font-size="12.00">Horizon Catalog</text>
 </g>
-<!-- finance_bucket -->
-<g id="node5" class="node">
-<title>finance_bucket</title>
-<path fill="#bbdefb" stroke="#1565c0" d="M156.19,-37.7C156.19,-37.7 269.81,-37.7 269.81,-37.7 275.81,-37.7 281.81,-43.7 281.81,-49.7 281.81,-49.7 281.81,-65.7 281.81,-65.7 281.81,-71.7 275.81,-77.7 269.81,-77.7 269.81,-77.7 156.19,-77.7 156.19,-77.7 150.19,-77.7 144.19,-71.7 144.19,-65.7 144.19,-65.7 144.19,-49.7 144.19,-49.7 144.19,-43.7 150.19,-37.7 156.19,-37.7"/>
-<text xml:space="preserve" text-anchor="middle" x="169.98" y="-60.7" font-family="Helvetica,sans-Serif" font-size="10.00">Finance</text>
-<text xml:space="preserve" text-anchor="middle" x="169.98" y="-48.7" font-family="Helvetica,sans-Serif" font-size="10.00">Bucket</text>
-<polyline fill="none" stroke="#1565c0" points="195.77,-37.7 195.77,-77.7"/>
-<text xml:space="preserve" text-anchor="middle" x="238.79" y="-64.7" font-family="Helvetica,sans-Serif" font-size="10.00">mortgage_rates</text>
-<polyline fill="none" stroke="#1565c0" points="195.77,-57.7 281.81,-57.7"/>
-<text xml:space="preserve" text-anchor="middle" x="238.79" y="-44.7" font-family="Helvetica,sans-Serif" font-size="10.00">...</text>
-</g>
-<!-- team_sf&#45;&gt;finance_bucket -->
-<g id="edge3" class="edge">
-<title>team_sf-&gt;finance_bucket</title>
-<path fill="none" stroke="#555555" d="M213,-114.02C213,-105.75 213,-95.62 213,-86.31"/>
-<polygon fill="#555555" stroke="#555555" points="215.45,-86.57 213,-79.57 210.55,-86.57 215.45,-86.57"/>
-</g>
-<!-- sf -->
+<!-- SF -->
 <g id="node2" class="node">
-<title>sf</title>
-<path fill="#bbdefb" stroke="#1565c0" d="M175.31,-186.7C175.31,-186.7 250.69,-186.7 250.69,-186.7 256.69,-186.7 262.69,-192.7 262.69,-198.7 262.69,-198.7 262.69,-210.7 262.69,-210.7 262.69,-216.7 256.69,-222.7 250.69,-222.7 250.69,-222.7 175.31,-222.7 175.31,-222.7 169.31,-222.7 163.31,-216.7 163.31,-210.7 163.31,-210.7 163.31,-198.7 163.31,-198.7 163.31,-192.7 169.31,-186.7 175.31,-186.7"/>
-<text xml:space="preserve" text-anchor="middle" x="213" y="-201.7" font-family="Helvetica,sans-Serif" font-size="10.00">Snowflake Horizon</text>
+<title>SF</title>
+<path fill="#bbdefb" stroke="#1565c0" d="M102.01,-129.8C102.01,-129.8 39.99,-129.8 39.99,-129.8 33.99,-129.8 27.99,-123.8 27.99,-117.8 27.99,-117.8 27.99,-105.8 27.99,-105.8 27.99,-99.8 33.99,-93.8 39.99,-93.8 39.99,-93.8 102.01,-93.8 102.01,-93.8 108.01,-93.8 114.01,-99.8 114.01,-105.8 114.01,-105.8 114.01,-117.8 114.01,-117.8 114.01,-123.8 108.01,-129.8 102.01,-129.8"/>
+<text xml:space="preserve" text-anchor="middle" x="71" y="-108.2" font-family="Helvetica,sans-Serif" font-size="12.00">Finace Team</text>
 </g>
-<!-- sf&#45;&gt;team_sf -->
-<g id="edge1" class="edge">
-<title>sf-&gt;team_sf</title>
-<path fill="none" stroke="#555555" d="M213,-186.27C213,-177.99 213,-167.93 213,-158.8"/>
-<polygon fill="#555555" stroke="#555555" points="215.45,-158.94 213,-151.94 210.55,-158.94 215.45,-158.94"/>
+<!-- HZ&#45;&gt;SF -->
+<g id="edge5" class="edge">
+<title>HZ-&gt;SF</title>
+<path fill="none" stroke="#555555" d="M67.97,-166.61C68.45,-158.07 69.04,-147.57 69.57,-138.12"/>
+<polygon fill="#555555" stroke="#555555" points="72.01,-138.47 69.96,-131.34 67.12,-138.19 72.01,-138.47"/>
 </g>
-<!-- team_bq -->
+<!-- BLM -->
 <g id="node3" class="node">
-<title>team_bq</title>
-<path fill="#bbdefb" stroke="#1565c0" d="M106.74,-150.2C106.74,-150.2 35.26,-150.2 35.26,-150.2 29.26,-150.2 23.26,-144.2 23.26,-138.2 23.26,-138.2 23.26,-126.2 23.26,-126.2 23.26,-120.2 29.26,-114.2 35.26,-114.2 35.26,-114.2 106.74,-114.2 106.74,-114.2 112.74,-114.2 118.74,-120.2 118.74,-126.2 118.74,-126.2 118.74,-138.2 118.74,-138.2 118.74,-144.2 112.74,-150.2 106.74,-150.2"/>
-<text xml:space="preserve" text-anchor="middle" x="71" y="-129.2" font-family="Helvetica,sans-Serif" font-size="10.00">Marketing Analyst</text>
+<title>BLM</title>
+<path fill="#bbdefb" stroke="#1565c0" d="M380.69,-202.8C380.69,-202.8 299.31,-202.8 299.31,-202.8 293.31,-202.8 287.31,-196.8 287.31,-190.8 287.31,-190.8 287.31,-178.8 287.31,-178.8 287.31,-172.8 293.31,-166.8 299.31,-166.8 299.31,-166.8 380.69,-166.8 380.69,-166.8 386.69,-166.8 392.69,-172.8 392.69,-178.8 392.69,-178.8 392.69,-190.8 392.69,-190.8 392.69,-196.8 386.69,-202.8 380.69,-202.8"/>
+<text xml:space="preserve" text-anchor="middle" x="340" y="-181.2" font-family="Helvetica,sans-Serif" font-size="12.00">Runtime Catalog</text>
 </g>
-<!-- marketing_bucket -->
-<g id="node6" class="node">
-<title>marketing_bucket</title>
-<path fill="#bbdefb" stroke="#1565c0" d="M27.53,-37.7C27.53,-37.7 114.47,-37.7 114.47,-37.7 120.47,-37.7 126.47,-43.7 126.47,-49.7 126.47,-49.7 126.47,-65.7 126.47,-65.7 126.47,-71.7 120.47,-77.7 114.47,-77.7 114.47,-77.7 27.53,-77.7 27.53,-77.7 21.53,-77.7 15.53,-71.7 15.53,-65.7 15.53,-65.7 15.53,-49.7 15.53,-49.7 15.53,-43.7 21.53,-37.7 27.53,-37.7"/>
-<text xml:space="preserve" text-anchor="middle" x="45.49" y="-60.7" font-family="Helvetica,sans-Serif" font-size="10.00">Marketing</text>
-<text xml:space="preserve" text-anchor="middle" x="45.49" y="-48.7" font-family="Helvetica,sans-Serif" font-size="10.00">Bucket</text>
-<polyline fill="none" stroke="#1565c0" points="75.44,-37.7 75.44,-77.7"/>
-<text xml:space="preserve" text-anchor="middle" x="100.95" y="-64.7" font-family="Helvetica,sans-Serif" font-size="10.00">housing</text>
-<polyline fill="none" stroke="#1565c0" points="75.44,-57.7 126.47,-57.7"/>
-<text xml:space="preserve" text-anchor="middle" x="100.95" y="-44.7" font-family="Helvetica,sans-Serif" font-size="10.00">...</text>
+<!-- HZ&#45;&gt;BLM -->
+<g id="edge3" class="edge">
+<title>HZ-&gt;BLM</title>
+<path fill="none" stroke="#555555" d="M118.45,-184.8C171.96,-184.8 225.46,-184.8 278.97,-184.8"/>
+<polygon fill="#555555" stroke="#555555" points="278.7,-187.25 285.7,-184.8 278.7,-182.35 278.7,-187.25"/>
+<text xml:space="preserve" text-anchor="middle" x="207.51" y="-174.83" font-family="Helvetica,sans-Serif" font-size="10.00">Snowflake CLD</text>
 </g>
-<!-- team_bq&#45;&gt;marketing_bucket -->
+<!-- gcs -->
+<g id="node5" class="node">
+<title>gcs</title>
+<path fill="#bbdefb" stroke="#1565c0" d="M112.29,-0.5C112.29,-0.5 295.71,-0.5 295.71,-0.5 301.71,-0.5 307.71,-6.5 307.71,-12.5 307.71,-12.5 307.71,-33.3 307.71,-33.3 307.71,-39.3 301.71,-45.3 295.71,-45.3 295.71,-45.3 112.29,-45.3 112.29,-45.3 106.29,-45.3 100.29,-39.3 100.29,-33.3 100.29,-33.3 100.29,-12.5 100.29,-12.5 100.29,-6.5 106.29,-0.5 112.29,-0.5"/>
+<text xml:space="preserve" text-anchor="middle" x="204" y="-30.5" font-family="Helvetica,sans-Serif" font-size="12.00">Customer GCS</text>
+<polyline fill="none" stroke="#1565c0" points="100.29,-22.9 307.71,-22.9"/>
+<text xml:space="preserve" text-anchor="middle" x="149.65" y="-8.1" font-family="Helvetica,sans-Serif" font-size="12.00">Finance Bucket</text>
+<polyline fill="none" stroke="#1565c0" points="199,-0.5 199,-22.9"/>
+<text xml:space="preserve" text-anchor="middle" x="253.36" y="-8.1" font-family="Helvetica,sans-Serif" font-size="12.00">Marketing Bucket</text>
+</g>
+<!-- SF&#45;&gt;gcs -->
+<g id="edge1" class="edge">
+<title>SF-&gt;gcs</title>
+<path fill="none" stroke="#555555" stroke-dasharray="5,2" d="M97.59,-93.42C116.53,-81.05 142.31,-64.21 163.75,-50.2"/>
+<polygon fill="#555555" stroke="#555555" points="165.06,-52.27 169.58,-46.39 162.38,-48.17 165.06,-52.27"/>
+<text xml:space="preserve" text-anchor="middle" x="166.5" y="-66.8" font-family="Helvetica,sans-Serif" font-size="10.00">Read/Write</text>
+</g>
+<!-- BLM&#45;&gt;HZ -->
 <g id="edge4" class="edge">
-<title>team_bq-&gt;marketing_bucket</title>
-<path fill="none" stroke="#555555" d="M71,-114.02C71,-105.75 71,-95.62 71,-86.31"/>
-<polygon fill="#555555" stroke="#555555" points="73.45,-86.57 71,-79.57 68.55,-86.57 73.45,-86.57"/>
+<title>BLM-&gt;HZ</title>
+<path fill="none" stroke="#555555" d="M287.02,-184.8C241.06,-184.8 174.6,-184.8 126.76,-184.8"/>
+<polygon fill="#555555" stroke="#555555" points="126.86,-182.35 119.86,-184.8 126.86,-187.25 126.86,-182.35"/>
+<text xml:space="preserve" text-anchor="middle" x="202.67" y="-190.8" font-family="Helvetica,sans-Serif" font-size="10.00">GCP External Catalog</text>
 </g>
-<!-- bq -->
+<!-- BQ -->
 <g id="node4" class="node">
-<title>bq</title>
-<path fill="#bbdefb" stroke="#1565c0" d="M104.24,-222.7C104.24,-222.7 37.76,-222.7 37.76,-222.7 31.76,-222.7 25.76,-216.7 25.76,-210.7 25.76,-210.7 25.76,-198.7 25.76,-198.7 25.76,-192.7 31.76,-186.7 37.76,-186.7 37.76,-186.7 104.24,-186.7 104.24,-186.7 110.24,-186.7 116.24,-192.7 116.24,-198.7 116.24,-198.7 116.24,-210.7 116.24,-210.7 116.24,-216.7 110.24,-222.7 104.24,-222.7"/>
-<text xml:space="preserve" text-anchor="middle" x="71" y="-201.7" font-family="Helvetica,sans-Serif" font-size="10.00">Runtime Catalog</text>
+<title>BQ</title>
+<path fill="#bbdefb" stroke="#1565c0" d="M378.35,-129.8C378.35,-129.8 299.65,-129.8 299.65,-129.8 293.65,-129.8 287.65,-123.8 287.65,-117.8 287.65,-117.8 287.65,-105.8 287.65,-105.8 287.65,-99.8 293.65,-93.8 299.65,-93.8 299.65,-93.8 378.35,-93.8 378.35,-93.8 384.35,-93.8 390.35,-99.8 390.35,-105.8 390.35,-105.8 390.35,-117.8 390.35,-117.8 390.35,-123.8 384.35,-129.8 378.35,-129.8"/>
+<text xml:space="preserve" text-anchor="middle" x="339" y="-108.2" font-family="Helvetica,sans-Serif" font-size="12.00">Marketing Team</text>
 </g>
-<!-- bq&#45;&gt;team_bq -->
+<!-- BLM&#45;&gt;BQ -->
+<g id="edge6" class="edge">
+<title>BLM-&gt;BQ</title>
+<path fill="none" stroke="#555555" d="M339.76,-166.61C339.64,-158.07 339.49,-147.57 339.36,-138.12"/>
+<polygon fill="#555555" stroke="#555555" points="341.81,-138.31 339.26,-131.34 336.91,-138.38 341.81,-138.31"/>
+</g>
+<!-- BQ&#45;&gt;gcs -->
 <g id="edge2" class="edge">
-<title>bq-&gt;team_bq</title>
-<path fill="none" stroke="#555555" d="M71,-186.27C71,-177.99 71,-167.93 71,-158.8"/>
-<polygon fill="#555555" stroke="#555555" points="73.45,-158.94 71,-151.94 68.55,-158.94 73.45,-158.94"/>
+<title>BQ-&gt;gcs</title>
+<path fill="none" stroke="#555555" stroke-dasharray="5,2" d="M312.01,-93.42C292.7,-81 266.39,-64.06 244.57,-50.01"/>
+<polygon fill="#555555" stroke="#555555" points="246.14,-48.11 238.93,-46.38 243.49,-52.23 246.14,-48.11"/>
+<text xml:space="preserve" text-anchor="middle" x="308.6" y="-66.8" font-family="Helvetica,sans-Serif" font-size="10.00">Read/Write</text>
 </g>
 </g>
 </svg>
