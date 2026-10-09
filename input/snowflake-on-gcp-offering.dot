@@ -1,0 +1,62 @@
+digraph snowflake_gcp_integration {
+    rankdir=LR
+    splines=ortho;
+    nodesep=1
+    ranksep=1
+    concentrate=true;
+
+    
+    subgraph gcp {
+        
+        runtime
+        bq
+        ge
+        gcs
+        gcp
+
+    }
+
+
+    gcs [shape=record label="{Google Cloud Storage | {Iceberg Tables | Data | Metadata}}"]
+    ge  [shape=record label="Gemini Enterprise | {Agents}"  ]
+    bq [shape=record label="{GCP \n Services | {Managed Spark | BigQuery | VertexAI}}"]
+    runtime [shape=record label="Open Lakehouse \n Runtime Catalog "]
+
+
+    horizon [shape=record label="{Snowflake \n Horizon | {Security | Governance}}" fontsize=12]
+    engine [shape=record label="{Query \n Services | {interactive | dynamic | adaptive}}"]
+    
+    
+    agents   [shape=record label="{Cortex \n Agents | {CoWork | AI Gateway | CoCo}}"]
+    spcs [shape=record label="{Workplace \n Constainer \n Services | {Notebook | Spark | Python | SQL}}"]
+    connectors [shape=record label="{Data \n Exchange | { SDK | Openflow | DBT}}"]
+    
+    gcp[shape=record label="{GCP \n Apps | {Looker | Cloud Run | DataFlow | ML Apps }}"]
+    ge [shape=record label="{Gemini \n Enteprise | {Agents | MCP | Assistent}}"]
+    
+    ml [shape=record label="{Machine \n Learning | {Feature Store | Train | Inference}}"]
+    
+
+
+    gcs -> {horizon, runtime} [constraint=false]
+ 
+    horizon -> runtime [dir=both xlabel="bidirectional sync"  constraint=false penwidth=3]
+
+    runtime -> bq [dir=both]
+
+    horizon -> {engine, agents}
+
+    engine -> {ml, spcs, connectors}
+
+    agents -> ge
+    
+    connectors -> gcp    
+
+    
+    
+{rank=same; ml connectors ge gcp spcs}
+    
+
+
+
+}
